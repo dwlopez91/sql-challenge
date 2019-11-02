@@ -1,0 +1,50 @@
+Data_Departments
+--
+Dept_Number int PK 
+Dept_Name varchar(255)
+
+Data_Dept_Employee
+--
+Employee_Numnber  int FK - Data_Employees.Employee_Number
+Dept_Number int FK - Data_Departments.Dept_Number
+Start_Date date 
+End_Date date
+
+
+Data_Dept_Manager
+--
+Dept_Number int FK - Data_Departments.Dept_Number
+Employee_Number int PK FK - Data_Employees.Employee_Number
+State_Date date FK 
+End_Date date
+
+Data_Employees
+--
+Employee_Number int PK
+Birthday date
+First_Name varchar(255)
+Last_Name varchar(255)
+Gender varchar(255)
+Start_Date date 
+
+Data_Salaries 
+--
+Employee_Number int PK FK - Data_Employees.Employee_Number
+Salary int
+Start_Date date 
+End_Date date
+
+Data_Titles
+--
+Employee_Number int PK FK >- Data_Employees.Employee_Number
+Title varchar(255)
+Start_Date date 
+End_Date date
+
+
+
+
+
+
+
+
